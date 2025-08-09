@@ -510,8 +510,9 @@ body {
 @media (max-width: 480px) {
     .container {
         padding: 0.5rem;
-        height: 100vh;
-        overflow: hidden;
+        min-height: 100vh;
+        height: auto;
+        overflow: visible;
         grid-template-rows: auto 1fr;
     }
     
@@ -524,6 +525,7 @@ body {
     
     .header-left {
         text-align: center;
+        padding: 2em;
     }
     
     .name {
@@ -568,8 +570,8 @@ body {
         gap: 0.75rem;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto;
-        height: 100%;
-        overflow: hidden;
+        height: auto;
+        overflow: visible;
     }
     
     .about {
@@ -588,7 +590,8 @@ body {
     }
     
     .section {
-        padding: 0.75rem;
+        padding: 1rem;
+        margin-bottom: 0.5rem;
     }
     
     .section h2 {
@@ -618,30 +621,37 @@ body {
     }
     
     .skills-icons {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.5rem;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
         margin-top: 0.75rem;
         padding-top: 0.75rem;
     }
     
     .skill-icon-item {
-        padding: 0.5rem;
+        padding: 0.75rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        gap: 1rem;
     }
     
     .skill-icon {
-        width: 64px;
-        height: 64px;
-        margin-bottom: 0.3rem;
+        width: 48px;
+        height: 48px;
+        margin-bottom: 0;
+        flex-shrink: 0;
     }
     
     .skill-label {
-        font-size: 0.65rem;
-        margin-bottom: 0.2rem;
+        font-size: 0.75rem;
+        margin-bottom: 0.25rem;
+        font-weight: 600;
     }
     
     .skill-description {
-        font-size: 0.55rem;
-        line-height: 1.2;
+        font-size: 0.65rem;
+        line-height: 1.3;
     }
     
     .project-card {
@@ -692,5 +702,42 @@ body {
     .contact-label,
     .contact-value {
         font-size: 0.65rem;
+    }
+}
+
+/* Extra small mobile screens */
+@media (max-width: 360px) {
+    .container {
+        padding: 0.25rem;
+    }
+    
+    .name {
+        font-size: 1.5rem;
+    }
+    
+    .title {
+        font-size: 0.8rem;
+    }
+    
+    .tagline {
+        font-size: 0.7rem;
+    }
+    
+    .skill-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .skill-icon-item {
+        gap: 0.75rem;
+        padding: 0.5rem;
+    }
+    
+    .skill-label {
+        font-size: 0.7rem;
+    }
+    
+    .skill-description {
+        font-size: 0.6rem;
     }
 }
