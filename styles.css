@@ -16,61 +16,64 @@ body {
 .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1rem;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    overflow: hidden;
 }
 
 /* Header Styles */
 .header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     animation: fadeInUp 0.8s ease-out;
 }
 
 .name {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
     background: linear-gradient(135deg, #64b5f6, #42a5f5, #2196f3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
     text-shadow: 0 0 30px rgba(33, 150, 243, 0.3);
+    line-height: 1.1;
 }
 
 .title {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 300;
     color: #cbd5e1;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 
 .tagline {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     color: #94a3b8;
     font-weight: 300;
 }
 
 /* Main Content */
 .main-content {
-    flex: 1;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 300px;
     grid-template-rows: auto auto;
-    gap: 3rem;
-    max-height: calc(100vh - 200px);
+    gap: 1.5rem;
+    height: 100%;
+    overflow: hidden;
 }
 
 .section {
     background: rgba(15, 23, 42, 0.8);
     border: 1px solid rgba(51, 65, 85, 0.3);
-    border-radius: 16px;
-    padding: 2rem;
+    border-radius: 12px;
+    padding: 1rem;
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
     animation: fadeInUp 0.8s ease-out;
+    overflow: hidden;
 }
 
 .section:hover {
@@ -80,10 +83,10 @@ body {
 }
 
 .section h2 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     font-weight: 600;
     color: #f1f5f9;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
     position: relative;
 }
 
@@ -106,28 +109,28 @@ body {
 
 .about p {
     color: #cbd5e1;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    line-height: 1.7;
+    margin-bottom: 0.75rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
 }
 
 /* Skills Section */
 .skills {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
 }
 
 .skills-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
 }
 
 .skill-category h3 {
     color: #64b5f6;
-    font-size: 1.2rem;
+    font-size: 0.95rem;
     font-weight: 600;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
 }
 
 .skill-category ul {
@@ -136,10 +139,10 @@ body {
 
 .skill-category li {
     color: #cbd5e1;
-    padding: 0.3rem 0;
+    padding: 0.15rem 0;
     position: relative;
-    padding-left: 1.2rem;
-    font-size: 0.95rem;
+    padding-left: 1rem;
+    font-size: 0.75rem;
     transition: color 0.3s ease;
 }
 
@@ -157,8 +160,8 @@ body {
 
 /* Projects Section */
 .projects {
-    grid-column: 1 / 3;
-    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
 }
 
 .project-showcase {
@@ -170,13 +173,14 @@ body {
     background: rgba(30, 41, 59, 0.6);
     border: 1px solid rgba(51, 65, 85, 0.4);
     border-radius: 12px;
-    padding: 2rem;
+    padding: 1rem;
     transition: all 0.3s ease;
     display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
-    max-width: 600px;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
     width: 100%;
+    height: 100%;
 }
 
 .project-icon {
@@ -211,7 +215,21 @@ body {
 }
 
 .project-content {
-    flex: 1;
+    text-align: center;
+}
+
+.project-card h3 {
+    color: #f1f5f9;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    color: #cbd5e1;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
 }
 
 .project-card:hover {
@@ -252,27 +270,25 @@ body {
 
 /* Contact Section */
 .contact {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 300px;
-    background: rgba(15, 23, 42, 0.95);
+    background: rgba(30, 41, 59, 0.6);
     border: 1px solid rgba(51, 65, 85, 0.4);
-    border-radius: 16px;
-    padding: 1.5rem;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-top: 1rem;
     backdrop-filter: blur(15px);
     animation: slideInRight 0.8s ease-out;
 }
 
 .contact h2 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 .contact-info {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 0.4rem;
 }
 
 .contact-item {
@@ -283,13 +299,13 @@ body {
 
 .contact-label {
     color: #94a3b8;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     font-weight: 500;
 }
 
 .contact-value {
     color: #cbd5e1;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     font-weight: 400;
 }
 
@@ -376,32 +392,37 @@ body {
 /* Mobile styles */
 @media (max-width: 480px) {
     .container {
-        padding: 1rem;
-        height: auto;
-        min-height: 100vh;
+        padding: 0.5rem;
+        height: 100vh;
+        overflow: hidden;
+        grid-template-rows: auto 1fr;
     }
     
     .header {
-        margin-bottom: 2rem;
+        margin-bottom: 0.5rem;
     }
     
     .name {
-        font-size: 2.2rem;
-        line-height: 1.2;
+        font-size: 1.8rem;
+        line-height: 1.1;
+        margin-bottom: 0.2rem;
     }
     
     .title {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
+        margin-bottom: 0.1rem;
     }
     
     .tagline {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
     
     .main-content {
-        gap: 1.5rem;
-        max-height: none;
+        gap: 0.75rem;
+        grid-template-columns: 1fr;
         grid-template-rows: auto auto auto;
+        height: 100%;
+        overflow: hidden;
     }
     
     .about {
@@ -420,87 +441,82 @@ body {
     }
     
     .section {
-        padding: 1.5rem;
+        padding: 0.75rem;
     }
     
     .section h2 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
     }
     
     .about p {
-        font-size: 0.9rem;
-        line-height: 1.6;
+        font-size: 0.75rem;
+        line-height: 1.4;
+        margin-bottom: 0.5rem;
     }
     
     .skills-grid {
-        gap: 1rem;
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
     }
     
     .skill-category h3 {
-        font-size: 1.1rem;
-        margin-bottom: 0.6rem;
+        font-size: 0.85rem;
+        margin-bottom: 0.3rem;
     }
     
     .skill-category li {
-        font-size: 0.85rem;
-        padding: 0.2rem 0;
+        font-size: 0.7rem;
+        padding: 0.1rem 0;
     }
     
     .project-card {
-        flex-direction: column;
-        padding: 1.5rem;
-        gap: 1rem;
-        text-align: center;
-    }
-    
-    .project-icon {
-        align-self: center;
+        padding: 0.75rem;
+        gap: 0.5rem;
     }
     
     .project-card h3 {
-        font-size: 1.1rem;
-        margin-bottom: 0.6rem;
+        font-size: 0.9rem;
+        margin-bottom: 0.3rem;
     }
     
     .project-card p {
-        font-size: 0.85rem;
-        line-height: 1.5;
+        font-size: 0.7rem;
+        line-height: 1.3;
+        margin-bottom: 0.5rem;
     }
     
     .tech-tags {
-        gap: 0.3rem;
+        gap: 0.25rem;
     }
     
     .tag {
-        padding: 0.2rem 0.6rem;
-        font-size: 0.7rem;
+        padding: 0.15rem 0.4rem;
+        font-size: 0.6rem;
     }
     
     .contact {
-        position: static;
-        width: 100%;
-        margin-top: 1.5rem;
-        padding: 1.2rem;
+        margin-top: 0.5rem;
+        padding: 0.75rem;
     }
     
     .contact h2 {
-        font-size: 1.3rem;
-        margin-bottom: 0.8rem;
+        font-size: 0.9rem;
+        margin-bottom: 0.4rem;
     }
     
     .contact-info {
-        gap: 0.6rem;
+        gap: 0.3rem;
     }
     
     .contact-item {
         flex-direction: column;
         align-items: flex-start;
-        gap: 0.2rem;
+        gap: 0.1rem;
     }
     
     .contact-label,
     .contact-value {
-        font-size: 0.8rem;
+        font-size: 0.65rem;
     }
 }
