@@ -527,6 +527,10 @@ body {
         text-align: center;
         padding: 2em;
     }
+
+    .about-description{
+        margin-top: 1em;
+    }
     
     .name {
         font-size: 1.8rem;
