@@ -211,6 +211,62 @@ body {
     color: #f1f5f9;
 }
 
+.skills-icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.skill-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem;
+    border-radius: 8px;
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid rgba(51, 65, 85, 0.3);
+    transition: all 0.3s ease;
+}
+
+.skill-icon-item:hover {
+    background: rgba(100, 181, 246, 0.1);
+    border-color: rgba(100, 181, 246, 0.4);
+    transform: translateY(-2px);
+}
+
+.skill-icon {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.leadership-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    width: 32px;
+    height: 32px;
+}
+
+.skill-label {
+    color: #cbd5e1;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.skill-description {
+    color: #94a3b8;
+    font-size: 0.65rem;
+    line-height: 1.3;
+    text-align: center;
+    font-weight: 400;
+}
+
 /* Projects Section */
 .projects {
     grid-column: 2 / 3;
@@ -559,6 +615,33 @@ body {
     .skill-category li {
         font-size: 0.7rem;
         padding: 0.1rem 0;
+    }
+    
+    .skills-icons {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        margin-top: 0.75rem;
+        padding-top: 0.75rem;
+    }
+    
+    .skill-icon-item {
+        padding: 0.5rem;
+    }
+    
+    .skill-icon {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 0.3rem;
+    }
+    
+    .skill-label {
+        font-size: 0.65rem;
+        margin-bottom: 0.2rem;
+    }
+    
+    .skill-description {
+        font-size: 0.55rem;
+        line-height: 1.2;
     }
     
     .project-card {
