@@ -9,9 +9,29 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1 class="name">Dan Hammond</h1>
-            <p class="title">Software Engineering Leader | Wellington, NZ</p>
-            <p class="tagline">Azure • .NET • Web Development</p>
+            <div class="header-left">
+                <h1 class="name">Dan Hammond</h1>
+                <p class="title">Software Engineering Leader | Wellington, NZ</p>
+                <p class="tagline">Azure • .NET • Web Development</p>
+            </div>
+            <div class="header-right">
+                <div class="header-contact">
+                    <a href="mailto:dhammond249@gmail.com" class="contact-link">
+                        <span class="contact-icon">✉️</span>
+                        <span class="contact-text">dhammond249@gmail.com</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/dan-hammond-8460b178/" class="contact-link" target="_blank">
+                        <svg class="contact-icon linkedin-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        <span class="contact-text">LinkedIn Profile</span>
+                    </a>
+                    <a href="Dan Hammond CV 2025.pdf" class="contact-link" target="_blank">
+                        <span class="contact-icon">📄</span>
+                        <span class="contact-text">Download CV</span>
+                    </a>
+                </div>
+            </div>
         </header>
 
         <main class="main-content">
@@ -61,45 +81,22 @@
                         <div class="project-icon">
                             <a href="#" class="app-link">
                                 <div class="icon-placeholder">
-                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="48" height="48" rx="12" fill="rgba(100, 181, 246, 0.2)" stroke="rgba(100, 181, 246, 0.4)" stroke-width="2"/>
-                                        <path d="M24 16L32 24L24 32L16 24L24 16Z" fill="#64b5f6"/>
-                                    </svg>
+                                    <img src="pantryzenicon-nobackground.png" alt="PantryZen App Icon" width="64" height="64">
                                 </div>
                             </a>
                         </div>
                         <div class="project-content">
-                            <h3>Enterprise E-commerce Platform</h3>
-                            <p>Led development of a scalable e-commerce solution using .NET Core and Azure, serving 100k+ daily users with 99.9% uptime.</p>
-                            <div class="tech-tags">
-                                <span class="tag">.NET Core</span>
-                                <span class="tag">Azure</span>
-                                <span class="tag">React</span>
-                            </div>
+                            <h3>Pantry Zen</h3>
+                            <p>AI augmented grocery shopping list.</p>
+                            <ul style="font-size: 0.8em;     text-align: left;    padding-left: 12px;">
+                                <li>Auto-catergosation of items</li>
+                                <li>Add recipes straight to shopping list</li>
+                                <li>Intuitive insights to prevent purchasing things you already have in stock or reminder of things you may have missed</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="contact">
-                    <h2>Get In Touch</h2>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <span class="contact-label">Email:</span>
-                            <span class="contact-value">dan@example.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-label">LinkedIn:</span>
-                            <span class="contact-value">linkedin.com/in/danhammond</span>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-label">GitHub:</span>
-                            <span class="contact-value">github.com/danhammond</span>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-label">Location:</span>
-                            <span class="contact-value">Wellington, NZ</span>
-                        </div>
-                    </div>
-                </div>
+
             </section>
         </main>
     </div>

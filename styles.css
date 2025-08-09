@@ -25,9 +25,20 @@ body {
 
 /* Header Styles */
 .header {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 1rem;
     animation: fadeInUp 0.8s ease-out;
+}
+
+.header-left {
+    text-align: left;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
 }
 
 .name {
@@ -53,6 +64,48 @@ body {
     font-size: 0.9rem;
     color: #94a3b8;
     font-weight: 300;
+}
+
+.header-contact {
+    display: flex;
+    flex-direction: column;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(51, 65, 85, 0.3);
+    border-radius: 8px;
+    padding: 0.5rem;
+    min-width: 180px;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.3rem 0.4rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    gap: 0.5rem;
+    justify-content: flex-start;
+}
+
+.contact-link:hover {
+    background: rgba(100, 181, 246, 0.1);
+}
+
+.contact-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.linkedin-icon {
+    width: 1rem;
+    height: 1rem;
+    color: #0077b5;
+}
+
+.contact-text {
+    color: #cbd5e1;
+    font-size: 0.75rem;
+    font-weight: 500;
 }
 
 /* Main Content */
@@ -207,6 +260,14 @@ body {
     background: rgba(100, 181, 246, 0.1);
     border: 1px solid rgba(100, 181, 246, 0.3);
     transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.icon-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
 }
 
 .icon-placeholder:hover {
@@ -399,7 +460,14 @@ body {
     }
     
     .header {
+        flex-direction: column;
+        align-items: center;
         margin-bottom: 0.5rem;
+        gap: 0.5rem;
+    }
+    
+    .header-left {
+        text-align: center;
     }
     
     .name {
@@ -415,6 +483,29 @@ body {
     
     .tagline {
         font-size: 0.8rem;
+    }
+    
+    .header-contact {
+        min-width: 160px;
+        padding: 0.4rem;
+    }
+    
+    .contact-link {
+        padding: 0.25rem 0.3rem;
+        gap: 0.3rem;
+    }
+    
+    .contact-icon {
+        font-size: 0.8rem;
+    }
+    
+    .linkedin-icon {
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+    
+    .contact-text {
+        font-size: 0.6rem;
     }
     
     .main-content {
