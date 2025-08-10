@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://danhammond.github.io/MyPortfolio/sitemap.xml
