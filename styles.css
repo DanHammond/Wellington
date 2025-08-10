@@ -13,6 +13,10 @@ body {
     overflow-x: hidden;
 }
 
+.p-end{
+    margin-bottom: 0 !important;
+}
+
 .container {
     max-width: 1400px;
     margin: 0 auto;
@@ -28,12 +32,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
     animation: fadeInUp 0.8s ease-out;
 }
 
 .header-left {
     text-align: left;
+    padding-left: 1rem;
 }
 
 .header-right {
@@ -80,7 +85,7 @@ body {
     display: flex;
     align-items: center;
     text-decoration: none;
-    padding: 0.3rem 0.4rem;
+    padding: 0.2rem 0;
     border-radius: 4px;
     transition: all 0.3s ease;
     gap: 0.5rem;
@@ -102,9 +107,14 @@ body {
     color: #0077b5;
 }
 
+.contact-me{
+    font-size: 0.8rem;
+    margin-left:
+}
+
 .contact-text {
     color: #cbd5e1;
-    font-size: 0.75rem;
+    font-size: 0.68rem;
     font-weight: 500;
 }
 
@@ -113,16 +123,17 @@ body {
     display: grid;
     grid-template-columns: 1fr 300px;
     grid-template-rows: auto auto;
-    gap: 1.5rem;
+    gap: 0.7rem;
     height: 100%;
     overflow: hidden;
 }
 
 .section {
+    padding-top: 0.6rem !important;
     background: rgba(15, 23, 42, 0.8);
     border: 1px solid rgba(51, 65, 85, 0.3);
     border-radius: 12px;
-    padding: 1rem;
+    padding: 0.8rem;
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
     animation: fadeInUp 0.8s ease-out;
@@ -136,7 +147,7 @@ body {
 }
 
 .section h2 {
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #f1f5f9;
     margin-bottom: 0.75rem;
@@ -160,10 +171,16 @@ body {
     grid-row: 1 / 2;
 }
 
+.app-description {
+    font-size: 0.68em;     
+    text-align: left;   
+    padding-left: 12px;
+}
+
 .about p {
     color: #cbd5e1;
     margin-bottom: 0.75rem;
-    font-size: 0.85rem;
+    font-size: 0.76rem;
     line-height: 1.5;
 }
 
@@ -215,7 +232,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
-    padding-top: 1rem;
+    padding-top: 4px;
 }
 
 .skill-icon-item {
@@ -237,8 +254,8 @@ body {
 }
 
 .skill-icon {
-    width: 64px;
-    height: 64px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
     margin-bottom: 0.5rem;
 }
