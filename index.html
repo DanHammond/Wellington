@@ -94,7 +94,7 @@
             <div class="header-right">
 
                 <div class="header-contact">
-                                    <h4 class="contact-me">Contact me</h4>
+                                    <h4 class="contact-me">Contact now</h4>
                     <a href="mailto:dhammond249@gmail.com" class="contact-link">
                         <span class="contact-icon">✉️</span>
                         <span class="contact-text">dhammond249@gmail.com</span>
@@ -171,6 +171,57 @@
 
             </section>
         </main>
+        
+        <!-- Mobile contact button and popup -->
+        <div class="mobile-contact-overlay" id="contactOverlay"></div>
+        <div class="mobile-contact-popup" id="contactPopup">
+            <div class="popup-header">
+                <h4>Contact now</h4>
+                <button class="close-btn" id="closeBtn">×</button>
+            </div>
+            <div class="popup-content">
+                <a href="mailto:dhammond249@gmail.com" class="popup-contact-link">
+                    <span class="contact-icon">✉️</span>
+                    <span class="contact-text">dhammond249@gmail.com</span>
+                </a>
+                <a href="https://www.linkedin.com/in/dan-hammond-8460b178/" class="popup-contact-link" target="_blank">
+                    <svg class="contact-icon linkedin-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    <span class="contact-text">LinkedIn Profile</span>
+                </a>
+                <a href="Dan Hammond CV 2025.pdf" class="popup-contact-link" target="_blank">
+                    <span class="contact-icon">📄</span>
+                    <span class="contact-text">My CV</span>
+                </a>
+            </div>
+        </div>
+        <button class="mobile-contact-btn" id="contactBtn">
+            <span class="btn-icon">📞</span>
+            <span>Contact me</span>
+        </button>
     </div>
+
+    <script>
+        const contactBtn = document.getElementById('contactBtn');
+        const contactPopup = document.getElementById('contactPopup');
+        const contactOverlay = document.getElementById('contactOverlay');
+        const closeBtn = document.getElementById('closeBtn');
+
+        contactBtn.addEventListener('click', () => {
+            contactPopup.classList.add('show');
+            contactOverlay.classList.add('show');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            contactPopup.classList.remove('show');
+            contactOverlay.classList.remove('show');
+        });
+
+        contactOverlay.addEventListener('click', () => {
+            contactPopup.classList.remove('show');
+            contactOverlay.classList.remove('show');
+        });
+    </script>
 </body>
 </html>
